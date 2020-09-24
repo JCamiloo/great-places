@@ -8,6 +8,7 @@ import {
   StyleSheet,
 } from "react-native";
 import Colors from "../constants/Colors";
+import MapPreview from "../components/MapPreview";
 import * as Location from "expo-location";
 import * as Permissions from "expo-permissions";
 
@@ -37,6 +38,7 @@ const LocationPicker = (props) => {
       setIsFetching(true);
       const location = await Location.getCurrentPositionAsync({
         timeout: 5000,
+        enableHighAccuracy: true,
       });
 
       setPickedLocation({
@@ -44,6 +46,7 @@ const LocationPicker = (props) => {
         lng: location.coords.longitude,
       });
     } catch (err) {
+      console.log(err);
       Alert.alert(
         "Could not fetch location",
         "Please try again later or pick a location on the map",
@@ -55,13 +58,13 @@ const LocationPicker = (props) => {
 
   return (
     <View style={styles.locationPicker}>
-      <View style={styles.mapPreview}>
+      <MapPreview style={styles.mapPreview} location={pickedLocation}>
         {isFetching ? (
           <ActivityIndicator size="large" color={Colors.primary} />
         ) : (
-          <Text>No location chosen yet!</Text>
+          <Text>No location chosen yet</Text>
         )}
-      </View>
+      </MapPreview>
       <Button
         title="Get user location"
         color={Colors.primary}
@@ -81,8 +84,6 @@ const styles = StyleSheet.create({
     height: 150,
     borderColor: "#ccc",
     borderWidth: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
 });
 
