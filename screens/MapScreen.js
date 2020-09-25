@@ -24,11 +24,8 @@ const MapScreen = (props) => {
     if (!selectedLocation) {
       return;
     }
-
-    props.navigation.navigate("NewPlace", {
-      pickedLocation: selectLocationHandler,
-    });
-  }, []);
+    props.navigation.navigate("NewPlace", { pickedLocation: selectedLocation });
+  }, [selectedLocation]);
 
   useEffect(() => {
     props.navigation.setParams({ saveLocation: savePickedLocationHandler });
@@ -50,7 +47,7 @@ const MapScreen = (props) => {
       onPress={selectLocationHandler}
     >
       {markerCoordinates && (
-        <Marker title="Picked Location" coordinate={markerCoordinates}></Marker>
+        <Marker title="Picked Location" coordinate={markerCoordinates} />
       )}
     </MapView>
   );

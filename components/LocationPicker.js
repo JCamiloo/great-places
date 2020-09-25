@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from "react-native";
 import Colors from "../constants/Colors";
-import MapPreview from "../components/MapPreview";
+import MapPreview from "./MapPreview";
 import * as Location from "expo-location";
 import * as Permissions from "expo-permissions";
 
@@ -21,7 +21,7 @@ const LocationPicker = (props) => {
   useEffect(() => {
     if (mapPickedLocation) {
       setPickedLocation(mapPickedLocation);
-      props.onLocationPicked(mapPickedLocation);
+      onLocationPicked(mapPickedLocation);
     }
   }, [mapPickedLocation, onLocationPicked]);
 
@@ -30,7 +30,7 @@ const LocationPicker = (props) => {
     if (result.status !== "granted") {
       Alert.alert(
         "Insufficient permissions!",
-        "You need to grant location permissiones to use this app",
+        "You need to grant location permissions to use this app",
         [{ text: "Okay" }]
       );
       return false;
@@ -54,13 +54,11 @@ const LocationPicker = (props) => {
         lat: location.coords.latitude,
         lng: location.coords.longitude,
       });
-
       props.onLocationPicked({
         lat: location.coords.latitude,
         lng: location.coords.longitude,
       });
     } catch (err) {
-      console.log(err);
       Alert.alert(
         "Could not fetch location",
         "Please try again later or pick a location on the map",

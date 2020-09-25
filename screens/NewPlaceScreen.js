@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import Colors from "../constants/Colors";
 import ImagePicker from "../components/ImagePicker";
 import LocationPicker from "../components/LocationPicker";
-import * as placesActions from "../store/actions/places";
+import * as placesActions from "../store/places-actions";
 
 const NewPlaceScreen = (props) => {
   const [titleValue, setTitleValue] = useState("");
