@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MapScreen component tests MapScreen component renders correctly 1`] = `
+<AIRMap
+  handlePanDrag={false}
+  initialRegion={null}
+  onChange={[Function]}
+  onLayout={[Function]}
+  onMapReady={[Function]}
+  onMarkerPress={[Function]}
+  onPress={[Function]}
+  region={
+    Object {
+      "latitude": 37.78,
+      "latitudeDelta": 0.0922,
+      "longitude": -122.43,
+      "longitudeDelta": 0.0421,
+    }
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+/>
+`;
+
+exports[`MapScreen tests MapScreen renders correctly 1`] = `
+<AIRMap
+  handlePanDrag={false}
+  initialRegion={null}
+  onChange={[Function]}
+  onLayout={[Function]}
+  onMapReady={[Function]}
+  onMarkerPress={[Function]}
+  onPress={[Function]}
+  region={
+    Object {
+      "latitude": 37.78,
+      "latitudeDelta": 0.0922,
+      "longitude": -122.43,
+      "longitudeDelta": 0.0421,
+    }
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+/>
+`;

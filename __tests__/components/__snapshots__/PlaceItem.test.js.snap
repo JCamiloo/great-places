@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlaceItem component tests PlaceItem component renders correctly 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderBottomColor": "#ccc",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "opacity": 1,
+      "paddingHorizontal": 30,
+      "paddingVertical": 15,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": undefined,
+      }
+    }
+    style={
+      Object {
+        "backgroundColor": "#ccc",
+        "borderColor": "#fc9208",
+        "borderRadius": 35,
+        "borderWidth": 1,
+        "height": 70,
+        "width": 70,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "justifyContent": "center",
+        "marginLeft": 25,
+        "width": 250,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 18,
+          "marginBottom": 5,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "#666",
+          "fontSize": 16,
+        }
+      }
+    />
+  </View>
+</View>
+`;
